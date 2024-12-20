@@ -196,7 +196,7 @@ listarUsuario();
 document.addEventListener('DOMContentLoaded', function () {
 
     const profileModal = document.getElementById('profileModal');
-    const profileImageInput = document.getElementById('profile_image');
+    const profileImageInput = document.getElementById('profile_image2');
     const changePhoto = document.getElementById('changePhoto');
     const deletePhotoButton = document.getElementById('deletePhoto');
     const cancelButton = document.getElementById('cancelModal');

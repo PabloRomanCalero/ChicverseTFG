@@ -26,7 +26,7 @@ body {
     text-align: center;
 }
 
-.dropdown-toggle {
+.dropdownOpciones {
     background-color: #0095f6;
     color: white;
     padding: 10px 20px;
@@ -38,12 +38,12 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dropdown-toggle:hover {
+.dropdownOpciones:hover {
     background-color: #0072cc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-menu {
+.dropdownMenu {
     display: none;
     position: absolute;
     left: 50%; 
@@ -59,17 +59,17 @@ body {
     margin: 0;
 }
 
-.dropdown-menu li {
+.dropdownMenu li {
     width: 100%;
     border-bottom: 1px solid #f3f3f3;
 }
 
-.dropdown-menu li:last-child {
+.dropdownMenu li:last-child {
     border-bottom: none;
 }
 
-.dropdown-menu a,
-.dropdown-menu button {
+.dropdownMenu a,
+.dropdownButton{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -86,25 +86,30 @@ body {
     border-radius: 8px;
 }
 
-.dropdown-menu img {
+.dropdownButton {
+    width: 100%;
+}
+
+
+.dropdownMenu img {
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
 
-.dropdown-menu a:hover,
-.dropdown-menu button:hover {
+.dropdownMenu a:hover,
+.dropdownButton:hover {
     background-color: #f9f9f9;
     color: #0072cc;
 }
 
-.dropdown-menu li form {
+.dropdownMenu li form  {
     display: flex;
     align-items: center;
     margin-block-end: 0px;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdownMenu {
     display: block;
 }
 
@@ -178,9 +183,7 @@ body {
     margin-top: 20px;
 }
 
-.botonForm:hover,
-a.botonForm:hover {
-    background-color: #0056b3;
+.botonForm:hover {
     cursor: pointer;
 }
 
@@ -402,7 +405,6 @@ a.botonForm {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5); 
     visibility: hidden;
-    transition: visibility 0s, opacity 0.2s ease-in-out;
     padding-left: 300px;
 }
 
