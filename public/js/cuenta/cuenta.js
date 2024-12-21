@@ -213,14 +213,14 @@ document.getElementById('profile_image').addEventListener('change', function() {
 listarUsuario();
 
 document.addEventListener('DOMContentLoaded', function () {
-
     const profileModal = document.getElementById('profileModal');
-    const profileImageInput = document.getElementById('profile_image2');
+    const profileImageInput = document.getElementById('profile_image');
     const changePhoto = document.getElementById('changePhoto');
     const deletePhotoButton = document.getElementById('deletePhoto');
     const cancelButton = document.getElementById('cancelModal');
     const modalDiv = document.querySelector('.modalDiv');
-    const profilePicture = document.querySelector(".profile-picture");
+    let profilePicture = document.querySelector(".profile-picture");
+    console.log(profilePicture);
     
     profilePicture.addEventListener('click', function () {
         profileModal.classList.remove('hidden');

@@ -1,11 +1,7 @@
-main {
-    color: #333;
-    margin-left: 320px !important;
-}
-
 .section-politica-privacidades {
     display: flex;
     flex-direction: column;
+    color: #333;
 }
 
 .article-politica-privacidades {

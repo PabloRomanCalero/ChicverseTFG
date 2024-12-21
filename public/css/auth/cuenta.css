@@ -1,9 +1,3 @@
-body {
-    background-color: #fff;
-    margin: 0;
-    overflow-y: scroll;
-}
-
 .seccionesFunciones ul li:nth-child(2) a{
     font-weight: bold;
 }
@@ -15,8 +9,6 @@ body {
     align-items: center;
     width: 100%;
     height: max-content;
-    margin-top: 1em;
-    position: relative;
 }
 
 
@@ -405,7 +397,7 @@ a.botonForm {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5); 
     visibility: hidden;
-    padding-left: 300px;
+    padding-left: 320px;
 }
 
 .modalContent {

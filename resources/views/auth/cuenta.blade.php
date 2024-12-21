@@ -11,21 +11,18 @@
         <div class="dropdownOpcionesDiv">
             <button class="dropdownOpciones botonForm">Opciones</button>
             <ul class="dropdownMenu">
-                <li><a href="{{route('formMedia')}}"><img src="https://cdn-icons-png.flaticon.com/512/992/992651.png"/>Publicar</a></li>
-                <li><a href="{{route('formAddress')}}"><img src="https://cdn-icons-png.flaticon.com/512/106/106129.png"/>Añadir Dirección</a></li>
-                <li>
-                    <form method="POST" action="{{ route('logout') }}" class="deslogearse">
-                        @csrf
-                        <button type="submit" class="dropdownButton"><img src="https://www.iconpacks.net/icons/2/free-exit-logout-icon-2857-thumb.png"/>Salir</button>
-                    </form>
-                </li>
+                <li><a href="{{route('formMedia')}}"><img src="https://cdn-icons-png.flaticon.com/512/992/992651.png"/>Publicar</a></li> 
                 <li>
                     <form id="profilePhotoForm" method="POST" action="{{route('profilePhoto')}}" enctype="multipart/form-data">
                         @csrf
                         
-                        <label for="profile_image2" class="dropdownButton"><img src="https://static.thenounproject.com/png/4879835-200.png"/>Cambiar foto</label>
-                        <input type="file" class="form-control-file" id="profile_image2" name="profile_image2" placeholder="Cambiar foto" accept=".jpg, .jpeg, .png, .mp4">
+                        <label for="profile_image" class="dropdownButton"><img src="https://static.thenounproject.com/png/4879835-200.png"/>Cambiar foto</label>
+                        <input type="file" class="form-control-file" id="profile_image" name="profile_image" placeholder="Cambiar foto" accept=".jpg, .jpeg, .png, .mp4">
                     </form>
+                </li>
+                <li><a href="{{route('formAddress')}}"><img src="https://cdn-icons-png.flaticon.com/512/106/106129.png"/>Añadir Dirección</a></li>
+                <li>
+                    <a href="{{route('showOrders')}}"><img src="https://cdn-icons-png.flaticon.com/512/3621/3621282.png"/>Mis Pedidos</a>
                 </li>
                 <li>
                     <form method="POST" action="{{route('deleteUser')}}" id="deleteUserForm" class="deleteUserForm">
@@ -36,7 +33,10 @@
                     </form>
                 </li>
                 <li>
-                    <a href="{{route('showOrders')}}"><img src="https://cdn-icons-png.flaticon.com/512/3621/3621282.png"/>Mis Pedidos</a>
+                    <form method="POST" action="{{ route('logout') }}" class="deslogearse">
+                        @csrf
+                        <button type="submit" class="dropdownButton"><img src="https://www.iconpacks.net/icons/2/free-exit-logout-icon-2857-thumb.png"/>Cerrar Sesión</button>
+                    </form>
                 </li>
             </ul>
         </div>

@@ -1,6 +1,5 @@
 main {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -13,6 +12,7 @@ main {
     padding: 20px;
     margin-top: 3em;
     width: 60%;
+    height: fit-content;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
