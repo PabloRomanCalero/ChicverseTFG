@@ -72,6 +72,9 @@ listarMedia = async () => {
         let mediaProduct = await respMediaProduct.json();
         let product = mediaProduct[0];
 
+        let productNameData = "";
+        let productLink = null;
+
         const mediaElement = document.createElement('div');
         mediaElement.classList.add('media');
 
@@ -106,7 +109,23 @@ listarMedia = async () => {
         commentsElement.innerHTML = `<span class="comment-count">0</span>`;
 
         const productName = document.createElement('p');
-        productName.innerHTML = `<strong>Prenda:</strong> ${product.name}`;
+        productName.innerHTML = "<strong>Prenda:</strong> ";
+
+        if (media.product_id != null) {
+            productNameData = product.name;
+            productLink = document.createElement('a');
+            productLink.href = `/product-info/${media.product_id}`;
+            productLink.textContent = productNameData;
+            productLink.classList.add('productLink');
+        } else {
+            productNameData = media.nombre_personalizado;
+        }
+
+        if (productLink) {
+            productName.appendChild(productLink); 
+        } else {
+            productName.appendChild(document.createTextNode(productNameData));
+        }
 
         const divComments = document.createElement('div');
         divComments.classList.add('divComments')

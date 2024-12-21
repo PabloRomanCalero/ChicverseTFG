@@ -16,9 +16,10 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained(
                 table:'users',indexName: 'UserMedia'
             )->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('product_id')->constrained(
+            $table->foreignId('product_id')->nullable()->constrained(
                 table:'products',indexName: 'MediaProduct'
             )->onUpdate('cascade')->onDelete('cascade');
+            $table->string('nombre_personalizado')->nullable();
             $table->string('url');
             $table->integer('likes')->default(0);
             $table->string('description');

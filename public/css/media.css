@@ -141,10 +141,18 @@ button[type="submit"] {
     height: 100%;
     border-radius: 50px;
     border: 2px dashed rgba(0, 149, 246, 0.4);
-    animation: pulse-border 1.5s infinite;
+    animation: prueba 1.5s infinite;
 }
 
-@keyframes pulse-border {
+.checkboxDiv {
+    margin-top: 10px;
+}
+
+.personalizadoDiv {
+    margin-top: 10px;
+}
+
+@keyframes prueba {
     0% {
         opacity: 0.6;
     }

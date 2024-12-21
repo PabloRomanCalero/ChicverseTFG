@@ -311,6 +311,20 @@ a.botonForm{
     display: none;
 }
 
+.productLink {
+    color: #0095F6; 
+    font-size: 1em;
+    font-weight: bold; 
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.productLink:hover {
+    color: #0056b3; 
+    transform: scale(1.05); 
+}
+
 @media (max-width: 768px) {
     .section-profile {
         margin-top: 4em;

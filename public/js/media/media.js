@@ -4,6 +4,9 @@ async function inicializar() {
     let buscador = document.getElementById("buscador");
     let resultadosDiv = document.getElementById("resultadosDiv");
     let botonForm = document.getElementById("botonForm");
+    let personalizadoInputWrapper = document.getElementById("personalizadoDiv");
+    let checkboxPersonalizado = document.getElementById("checkbox");
+
     document.getElementById('file').addEventListener('change', function () {
         const progressBar = document.getElementById('progressBar');
         let progress = 0;
@@ -23,6 +26,18 @@ async function inicializar() {
                     progressBar.textContent = `${progress}%`;
                 }
             }, 100); 
+        }
+    });
+
+    checkboxPersonalizado.addEventListener("change", () => {
+        if (checkboxPersonalizado.checked) {
+            personalizadoInputWrapper.style.display = "block";
+            buscador.disabled = true;
+            buscador.value = "";
+        } else {
+            personalizadoInputWrapper.style.display = "none";
+            buscador.disabled = false; 
+            
         }
     });
 

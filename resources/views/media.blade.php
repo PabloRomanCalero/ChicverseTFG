@@ -13,7 +13,7 @@
 
             <div class="inputFileWrapper">
                 <label class="botonForm" for="file">Cargar media</label>
-                <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .mp4, .mov" required>
+                <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .mp4" required>
 
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar">0%</div>
@@ -24,6 +24,17 @@
                 <label for="prenda">Prenda:</label>
                 <input type="text" id="buscador" name="buscador" placeholder="Seleccione la prenda" required>
                 <div class="resultadosDiv" id="resultadosDiv"></div>
+            </div>
+
+            <div class="checkboxDiv">
+                <label for="checkbox">
+                    <input type="checkbox" id="checkbox" name="checkbox"> Prenda personalizada
+                </label>
+            </div>
+
+            <div class="personalizadoDiv" id="personalizadoDiv" style="display: none;">
+                <label for="prendaPersonalizada">Nombre de la prenda:</label>
+                <input type="text" id="prendaPersonalizada" name="prendaPersonalizada" placeholder="Escriba el nombre">
             </div>
         
             <button class="botonForm" type="submit" id="botonForm" disabled>Subir Contenido</button>

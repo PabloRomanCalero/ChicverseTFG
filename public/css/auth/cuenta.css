@@ -20,7 +20,7 @@ body {
 }
 
 
-.dropdown {
+.dropdownOpcionesDiv {
     position: relative;
     display: inline-block;
     text-align: center;
@@ -109,7 +109,7 @@ body {
     margin-block-end: 0px;
 }
 
-.dropdown:hover .dropdownMenu {
+.dropdownOpcionesDiv:hover .dropdownMenu {
     display: block;
 }
 
@@ -475,6 +475,20 @@ a.botonForm {
 
 .hidden {
     display: none;
+}
+
+.productLink {
+    color: #0095F6; 
+    font-size: 1em;
+    font-weight: bold; 
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.productLink:hover {
+    color: #0056b3; 
+    transform: scale(1.05); 
 }
 
 @media (max-width: 1024px) {

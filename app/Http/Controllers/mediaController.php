@@ -37,13 +37,23 @@ class mediaController extends Controller
         $media = new media();
         $userId = Auth::user()->id;
         
+        $isPersonalizado = $request->has('checkbox') && $request->checkbox;
+
         if ($request->hasFile('file')) {
             $userFolder = public_path('media');
             $fileName = $request->file('file')->getClientOriginalName();
             $request->file('file')->move($userFolder, $fileName);
             $media->user_id = $userId;
-            $media->product_id = $request->get('buscador');
             $media->url = 'media/' . $fileName;
+            if ($isPersonalizado) {
+                echo "a";
+                $media->product_id = null; 
+                $media->nombre_personalizado = $request->get('prendaPersonalizada');
+            } else {
+                $media->product_id = $request->get('buscador');
+                $media->nombre_personalizado = null; 
+            }
+
             $media->description = $request->get('description');
             $media->save();
             return redirect('cuenta');
