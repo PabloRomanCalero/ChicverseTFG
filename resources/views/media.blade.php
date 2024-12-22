@@ -33,8 +33,7 @@
             </div>
 
             <div class="personalizadoDiv" id="personalizadoDiv" style="display: none;">
-                <label for="prendaPersonalizada">Nombre de la prenda:</label>
-                <input type="text" id="prendaPersonalizada" name="prendaPersonalizada" placeholder="Escriba el nombre">
+                <input type="text" id="prendaPersonalizada" name="prendaPersonalizada" placeholder="Escriba el nombre de la prenda">
             </div>
         
             <button class="botonForm" type="submit" id="botonForm" disabled>Subir Contenido</button>

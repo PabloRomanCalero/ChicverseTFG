@@ -152,6 +152,17 @@ button[type="submit"] {
     margin-top: 10px;
 }
 
+
+
+#prendaPersonalizada {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
 @keyframes prueba {
     0% {
         opacity: 0.6;

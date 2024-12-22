@@ -52,14 +52,14 @@
 
 .product p {
     font-size: 14px;
-    margin: 5px 0 5px 2px;
+    margin: 5px 0 1em 2px;
     color: #777;
     text-align: left;
 }
 
 .product h4 {
     font-size: 14px;
-    margin: 5px 0 1em 2px;
+    margin: 5px 0 5px 2px;
     color: #333;
     text-align: left; 
 }

@@ -202,7 +202,7 @@ async function inicializar() {
             buttonVer.textContent = 'Ver más';
 
             productForm.appendChild(buttonVer);
-            productDiv.append(productImg,productName,productPrice,productMarca,productTalla,productCantidad,productForm,addButton);
+            productDiv.append(productImg,productName,productMarca,productPrice,productTalla,productCantidad,productForm,addButton);
             productsContainer.appendChild(productDiv);
         }
     }

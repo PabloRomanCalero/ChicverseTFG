@@ -63,8 +63,10 @@ async function listarCarrito(){
             let mas = document.createElement('button');
             let cantidad = document.createElement('p');
             let menos = document.createElement('button');
+            let divPrecios = document.createElement('div');
             let precio = document.createElement('p');
             let precioTotalProducto = document.createElement('p');
+            let divBotones = document.createElement('div');
             let botonEliminar = document.createElement('button');
 
             img.src = imageProduct.url;
@@ -103,12 +105,16 @@ async function listarCarrito(){
             cantidad.className = "cantidad-producto";
             menos.className = "boton-mas-menos";
             precio.className = "precio--producto-carrito";
+            divPrecios.className = "div--precios-carrito";
             precioTotalProducto.className = "precioFinal--producto-carrito";
             botonEliminar.className ="boton--borrarProducto-carrito";
+            divBotones.className = "div--botones-carrito";
 
             divNomStock.append(nombre,talla,stock);
             divBotonCantidad.append(menos,cantidad,mas);
-            articuloProducto.append(img,divNomStock,divBotonCantidad,precio,precioTotalProducto,botonEliminar);
+            divBotones.append(divBotonCantidad, botonEliminar);
+            divPrecios.append(precio, precioTotalProducto);
+            articuloProducto.append(img,divNomStock,divPrecios,divBotones);
             sectionCarrito.append(articuloProducto);
 
             precioFinal += producto.price * line.quantity;

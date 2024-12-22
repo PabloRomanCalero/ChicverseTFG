@@ -14,7 +14,7 @@ main {
     width: 60%;
     height: fit-content;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
   
 .article-img--check {
@@ -26,61 +26,117 @@ main {
     width: 150px;
     height: auto;
 }
-  
 .articulo--producto-carrito {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    color: #333;
 }
-  
+
+.articulo--producto-carrito:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
 .img--producto-carrito {
     width: 100px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
 }
-  
+
+.img--producto-carrito:hover {
+    transform: scale(1.01);
+}
+
 .div--nombreStock-carrito {
-    flex: 2;
+    flex: 1;
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
 }
-  
+
+.div--nombreStock-carrito p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 5px 0;
+}
+
 .div--nombreStock-carrito h2 {
     font-size: 1.2em;
-    margin: 0 0 10px;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-  
+
+.talla--producto-carrito,
 .stock--producto-carrito {
-    color: #888;
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
-  
+
+.div--precios-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.precio--producto-carrito,
+.precioFinal--producto-carrito {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+.div--botones-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 10px;
+}
+
 .div--botonCantidad-carrito {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
-  
+
 .boton-mas-menos {
     background-color: #0095f6;
     color: white;
     border: none;
-    padding: 10px;
-    margin: 0 5px;
-    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 6px;
     cursor: pointer;
 }
-  
+
 .boton-mas-menos:hover {
     background-color: #0056b3;
 }
-  
-.div--botonCantidad-carrito p {
-    margin: 0 10px;
+
+.boton--borrarProducto-carrito {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
     font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.boton--borrarProducto-carrito:hover {
+    background-color: #c82333;
 }
 
 .select-descuentos {
@@ -102,21 +158,6 @@ main {
 .precioFinal--producto-carrito {
     font-size: 1.2em;
     font-weight: bold;
-    color: #555;
-}
-  
-.boton--borrarProducto-carrito {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin-left: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-  
-.boton--borrarProducto-carrito:hover {
-    background-color: #c82333;
 }
 
 .articulo-carrito-final {
@@ -135,6 +176,7 @@ main {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 .boton-carrito-finalizar-compra:hover {
@@ -168,7 +210,7 @@ main {
 }
 
 .boton-confirmacion-direccion {
-    background-color: #28a745;
+    background-color: #0095f6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -178,11 +220,11 @@ main {
 }
 
 .boton-confirmacion-direccion:hover {
-    background-color: #218838;
+    background-color: #0056b3;
 }
 
 .boton-finalizar-pago{
-    background-color: #28a745;
+    background-color: #0095f6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -191,7 +233,7 @@ main {
 }
 
 .boton-finalizar-pago:hover {
-    background-color: #218838;
+    background-color: #0056b3;
 }
 
 .article-venta-final {
