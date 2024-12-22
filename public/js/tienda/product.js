@@ -26,7 +26,7 @@ async function mostrarProducto() {
     productMarca.textContent = product.brand;
     
     let productTalla = document.createElement('label');
-    productTalla.textContent = 'Talla: ';
+    productTalla.textContent = 'Talla ';
     
     let selectTalla = document.createElement('select');
     selectTalla.classList.add('selectTalla');

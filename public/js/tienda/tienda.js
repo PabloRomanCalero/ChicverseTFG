@@ -116,7 +116,7 @@ async function inicializar() {
             productMarca.textContent = product.brand;
 
             let productTalla = document.createElement('label');
-            productTalla.textContent = 'Talla: ';
+            productTalla.textContent = 'Talla ';
             
             let selectTalla = document.createElement('select');
             selectTalla.classList.add('selectTalla');
@@ -137,7 +137,7 @@ async function inicializar() {
             let stockTalla = await getStockTalla();
 
             let productCantidad = document.createElement('label');
-            productCantidad.textContent = 'Cantidad: ';
+            productCantidad.textContent = 'Cant. ';
 
             let inputCantidad = document.createElement('input');
             inputCantidad.classList.add('inputCantidad');
@@ -202,7 +202,7 @@ async function inicializar() {
             buttonVer.textContent = 'Ver más';
 
             productForm.appendChild(buttonVer);
-            productDiv.append(productImg,productName,productMarca,productPrice,productTalla,productCantidad,productForm,addButton);
+            productDiv.append(productImg,productName,productPrice,productMarca,productTalla,productCantidad,productForm,addButton);
             productsContainer.appendChild(productDiv);
         }
     }
