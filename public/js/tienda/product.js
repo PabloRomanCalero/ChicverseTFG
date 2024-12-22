@@ -15,9 +15,20 @@ async function mostrarProducto() {
     let productDiv = document.createElement('div');
     productDiv.classList.add('product');
 
+    let divImg = document.createElement('div');
+    divImg.classList.add('divImg');
+
     let productImg = document.createElement('img');
     productImg.src = '/' + imageProduct.url;
     productImg.alt = product.name;
+
+    let productDescription = document.createElement('p');
+    productDescription.textContent = product.description;
+
+    divImg.append(productImg);
+
+    let divInfoProduct = document.createElement('div');
+    divInfoProduct.classList.add('divInfoProduct');
 
     let productName = document.createElement('h2');
     productName.textContent = product.name;
@@ -45,6 +56,10 @@ async function mostrarProducto() {
     productPrice.textContent = 'Precio: ' + product.price + '€';
 
     let stockTalla = await getStockTalla();
+
+    let productCantidad = document.createElement('label');
+    productCantidad.textContent = 'Cantidad ';
+
     let inputCantidad = document.createElement('input');
     inputCantidad.classList.add('inputCantidad');
     inputCantidad.type = 'number';
@@ -72,6 +87,8 @@ async function mostrarProducto() {
         }
     });
 
+    productCantidad.appendChild(inputCantidad);
+
     async function getStockTalla(){
         let selectedTalla = selectTalla.value;
         let response = await fetch(`/api/tallas/${product.id}/getStockOfTalla/${selectedTalla}`, {
@@ -96,17 +113,17 @@ async function mostrarProducto() {
         }
     });
 
-    const volverButton = document.createElement('a');
+    let volverButton = document.createElement('a');
     volverButton.textContent = 'Volver';
     volverButton.classList.add('buttonVolver');
     volverButton.href = tiendaUrl;
 
-    productDiv.append(productImg,productName,productMarca,productTalla,productPrice,inputCantidad,addButton,volverButton);
+    divInfoProduct.append(productName,productMarca,productPrice,productDescription,productTalla,productCantidad,addButton,volverButton);
+
+    productDiv.append(divImg, divInfoProduct);
     productContainer.appendChild(productDiv);
 
-    const productDescription = document.createElement('p');
-    productDescription.textContent = product.description;
-    productContainer.appendChild(productDescription);
+    
 }
 
 function showSnackbar(message) {

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('sex');
             $table->string('brand');
-            $table->string('description');
+            $table->text('description');
             $table->decimal('price');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();

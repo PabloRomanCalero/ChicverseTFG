@@ -804,7 +804,7 @@ const makeProducts = async () => {
                     arrayErrores.push('Error en el precio del producto, por favor escríbalo bien');
                     error = true;
                 }
-                if (inputDescription.value === '' || inputDescription.value === null || inputDescription.value.length > 255) {
+                if (inputDescription.value === '' || inputDescription.value === null) {
                     arrayErrores.push('Error en la descripción del producto, por favor escríbalo bien');
                     error = true;
                 }
