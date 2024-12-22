@@ -9,121 +9,11 @@
     font-weight: bold;
 }
 
-#sexDiv {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    margin-top: 5em;
-}
-
-#sexDiv div {
-    cursor: pointer;
-    padding: 25px 50px;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 20px;
-}
-
-#sexDiv div:hover {
-    background-color: #0095f6;
-    color: #fff;
-}
-
-#sexDiv .selected {
-    background-color: #0095f6;
-    color: #fff;
-}
-
-#sexDiv div + div {
-    margin-left: 30px; 
-}
-
-#listaCategory {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#listaCategory h2 {
-    margin-bottom: 20px;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-#listaCategory ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-#listaCategory li {
-    display: inline-block;
-    margin-right: 20px;
-    position: relative;
-    font-size: 18px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-#listaCategory li:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 1px;
-    background-color: #999;
-    right: -10px;
-    
-}
-
-#listaCategory li:last-child:after {
-    display: none; 
-}
-
-#listaCategory li:hover {
-    color: #0095f6;
-}
-
 #product-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-
-.containerBuscador {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerBuscador input[type="text"] {
-    margin-top: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: 50%;
-    margin-bottom: 10px;
-}
-
-.resultadosDiv {
-    display: none;
-    width: 20%;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-}
-
-.resultadoP {
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.resultadoP:hover {
-    background-color: whitesmoke;
+    margin-top: 3em;
 }
 
 .product {
@@ -156,6 +46,18 @@
     margin-top: 10px;
     font-size: 18px;
     color: #888;
+}
+
+.product label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.selectTalla {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .botonAdd {
@@ -209,7 +111,6 @@
 
 .inputCantidad {
     padding: 8px;
-    margin-bottom: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 60px;
@@ -232,6 +133,99 @@
 #snackbar.show {
     visibility: visible;
     opacity: 1;
+}
+
+.navbarProducts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #C7C7C7;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.sexDiv {
+    display: flex;
+    gap: 20px;
+}
+
+.sexDiv div {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.sexDiv .selected {
+    font-weight: bold;
+    border-bottom: 2px solid #0095f6;
+}
+
+.listaCategory ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listaCategory ul li {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.listaCategory li:hover {
+    color: #0095f6;
+}
+
+.listaCategory li.selected {
+    color: #0095f6;
+}
+
+.containerBuscador {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.containerBuscador input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.resultadosDiv {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 2px;
+    display: none; 
+}
+
+.resultadosDiv div {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.resultadosDiv div:hover {
+    background-color: #f0f0f0;
+}
+
+.fa-search {
+    margin-right: 5px;
 }
 
 @media (max-width: 1024px) {

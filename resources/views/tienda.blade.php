@@ -5,34 +5,29 @@
 
 @section('content')
     @csrf
-    <div class="main-container"> 
-        <div id="sexDiv">
+    <div class="navbarProducts">
+        <div class="sexDiv">
             <div id="sex-hombre" class="selected">Hombre</div>
             <div id="sex-mujer">Mujer</div>
         </div>
-        
-        <div id="listaCategory">
-            <h2>Seleccione el tipo de prenda:</h2>
+        <div class="listaCategory">
             <ul>
-                <li>Zapatillas</li>
+                <li class="selected">Zapatillas</li>
                 <li>Camisetas</li>
                 <li>Polos</li>
                 <li>Vaqueros</li>
                 <li>Pantalones</li>
-                <li>Chaquetas</li>               
+                <li>Chaquetas</li>
             </ul>
-            <div class="containerBuscador">
-                <input type="text" id="buscador" name="buscador" placeholder="Buscar prenda" required>
-                <div class="resultadosDiv" id="resultadosDiv"></div>
-            </div>
         </div>
-
-        
-        
-        <div id="product-container">
-            
+        <div class="containerBuscador">
+            <input type="text" id="buscador" name="buscador" placeholder="Buscar prenda" required>
+            <div class="resultadosDiv" id="resultadosDiv"></div>
+            <i class="fa fa-search"></i>
         </div>
-
+    </div>
+    <div class="main-container"> 
+        <div id="product-container"></div>
         <div id="snackbar"></div>
     </div>
     

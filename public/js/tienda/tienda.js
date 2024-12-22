@@ -16,8 +16,9 @@ async function inicializar() {
     });
 
     function handleSexSelection(sex) {
-        const selectedDiv = document.querySelector('#sexDiv div.selected');
+        const selectedDiv = document.querySelector('.sexDiv div.selected');
         if (selectedDiv) {
+            console.log(selectedDiv);
             selectedDiv.classList.remove('selected');
         }
 
@@ -29,9 +30,16 @@ async function inicializar() {
         loadProducts(selectedCategory, selectedSex);
     }
 
-    const categoryItems = document.querySelectorAll('#listaCategory li');
+    const categoryItems = document.querySelectorAll('.listaCategory li');
     categoryItems.forEach(item => {
         item.addEventListener('click', function() {
+            const prueba = document.querySelector('.listaCategory li.selected');
+            if (prueba) {
+                console.log(prueba);
+                prueba.classList.remove('selected');
+            }
+
+            item.classList.add('selected');
             selectedCategory = this.textContent; 
             console.log("Categoría seleccionada:", selectedCategory);
             loadProducts(selectedCategory, selectedSex);
@@ -49,7 +57,7 @@ async function inicializar() {
         let resultadosFiltrados = productsData.filter(producto => (producto.name).toLowerCase().startsWith(filtro));
         if (resultadosFiltrados.length > 0) {
             resultadosDiv.style.display = "block";    
-            //vacio el div del autocomplete
+
             resultadosDiv.innerHTML="";
             resultadosFiltrados.forEach(producto => {
                 let resultadoP = document.createElement("div");
@@ -127,6 +135,10 @@ async function inicializar() {
             productPrice.textContent = product.price + '€';
 
             let stockTalla = await getStockTalla();
+
+            let productCantidad = document.createElement('label');
+            productCantidad.textContent = 'Cantidad: ';
+
             let inputCantidad = document.createElement('input');
             inputCantidad.classList.add('inputCantidad');
             inputCantidad.type = 'number';
@@ -153,6 +165,8 @@ async function inicializar() {
                     inputCantidad.value = 1;
                 }
             });
+
+            productCantidad.appendChild(inputCantidad);
 
             async function getStockTalla(){
                 let selectedTalla = selectTalla.value;
@@ -188,7 +202,7 @@ async function inicializar() {
             buttonVer.textContent = 'Ver más';
 
             productForm.appendChild(buttonVer);
-            productDiv.append(productImg,productName,productMarca,productTalla,productPrice,inputCantidad,productForm,addButton);
+            productDiv.append(productImg,productName,productMarca,productPrice,productTalla,productCantidad,productForm,addButton);
             productsContainer.appendChild(productDiv);
         }
     }
