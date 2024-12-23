@@ -121,25 +121,5 @@ body {
         padding: 0.6em 1em;
     }
 
-    .bottomNavigation ul li img {
-        width: 32px !important;
-        height: 32px !important;
-    }
-
-    .bottomNavigation ul li span {
-        font-size: 18px !important;
-    }
-
-    #numCarritoBottom {
-        font-size: 12px !important;
-    }
-
-    .bottomNavigation .dropdown .submenu li a {
-        font-size: 12px !important;
-    }
-
-    .bottomNavigation .submenu {
-        padding: 5px !important;
-    }
 }
 

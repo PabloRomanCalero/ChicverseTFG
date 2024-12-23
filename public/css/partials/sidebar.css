@@ -224,7 +224,7 @@ main {
     display: none; 
     position: absolute;
     bottom: 100%; 
-    left: 0;
+    right: 1%;
     margin: 2px;
     background-color: #fff;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
@@ -276,47 +276,19 @@ main {
         flex-direction: column;
     }
     .bottomNavigation ul li img {
-        width: 36px;
-        height: 36px;
+        width: 3em;
+        height: 3em;
     }
     .bottomNavigation ul li span {
-        font-size: 18px;
+        font-size: 1.5em;
     }
-    .bottomNavigation .dropdown .submenu {
-        width: 80%; 
-    }
+
     .bottomNavigation .dropdown .submenu li a{
-        font-size: 18px;
+        font-size: 1em;
+        display: flex;
     }
     #numCarritoBottom {
-        font-size: 16px;
-    }
-}
-@media (max-width: 500px) {
-    .bottomNavigation ul li img {
-        width: 42px;
-        height: 42px;
-    }
-    .bottomNavigation ul li span {
-        font-size: 22px;
-    }
-    .bottomNavigation .dropdown .submenu li a{
-        font-size: 20px;
-    }
-}
-@media (max-width: 400px) {
-    .bottomNavigation ul li img {
-        width: 50px;
-        height: 50px;
-    }
-    .bottomNavigation ul li span {
-        font-size: 26px;
-    }
-    .bottomNavigation .dropdown .submenu li a{
-        font-size: 24px;
-    }
-    #numCarritoBottom {
-        font-size: 22px;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 1250px) {
