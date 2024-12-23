@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{asset('css/auth/registro.css')}}">
 <link rel="icon" type="image/png" href="{{asset('img/sidebar/logo.svg')}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="{!! asset('js/registro/registro.js') !!}" defer></script>
 
 <div class="main-registro">

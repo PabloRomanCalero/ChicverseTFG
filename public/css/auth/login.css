@@ -24,7 +24,7 @@ body {
     border-radius: 10px;
     padding: 50px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 21%;
+    width: 480px;
 }
 
 .article-login-img {
@@ -136,9 +136,10 @@ label {
     display: flex;
     align-items: center;
 }
- .input-group:first-child {
+
+.input-group:first-child {
     justify-content: center;
- }
+}
 
 .input-group i {
     color: #888;
@@ -163,48 +164,84 @@ label {
     margin-right: 10px;
 }
 
-
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
     .section-login {
-        padding: 40px;
-        margin-top: 2em;
+        width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section-login {
+        padding: 25px;
+    }
+    .article-login-img img {
+        width: 100px;
     }
 
     .titulo h1 {
         font-size: 2em;
     }
 
+    label {
+        font-size: 0.9em;
+    }
+
+    .input-group input {
+        font-size: 0.9em;
+    }
+
     .boton {
+        padding: 10px;
         font-size: 1em;
+    }
+
+    .volver-inicio-login a {
+        font-size: 0.9em;
+    }
+
+    .registro > a {
+        font-size: 0.9em;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 420px) {
+
     .section-login {
-        width: 100%;
-        padding: 30px;
+        padding: 10px;
+    }
+    .article-login-img img {
+        width: 100px;
     }
 
     .titulo h1 {
         font-size: 1.8em;
-        margin-bottom: 20px;
     }
 
-    input[type="text"],
-    input[type="password"] {
-        padding: 12px;
-        margin-bottom: 20px;
+    label {
+        font-size: 0.9em;
+    }
+
+    .input-group input {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .input-group {
+        padding: 15px;
     }
 
     .boton {
+        padding: 10px;
         font-size: 0.9em;
-        padding: 12px;
-        margin-left: 0;
-        margin-right: 0;
     }
 
-    .article-boton {
-        flex-direction: column;
-        gap: 10px;
+    .volver-inicio-login a {
+        font-size: 0..8em;
+    }
+
+    .registro > a {
+        font-size: 0.8em;
     }
 }
+
