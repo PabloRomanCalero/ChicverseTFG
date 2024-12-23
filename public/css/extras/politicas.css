@@ -31,3 +31,59 @@
     width: 100%;
 
 }
+
+@media (max-width: 768px) {
+    .article-politica-privacidades {
+        margin: 1em 0.5em; 
+        font-size: 0.9em; 
+    }
+
+    .article-politica-privacidades h1 {
+        font-size: 1.2em; 
+    }
+
+    .article-politica-privacidades h2 {
+        font-size: 1em;
+    }
+
+    .titulo-extra {
+        font-size: 1.8em; 
+        border-bottom: 1px solid rgb(88, 87, 87);
+    }
+}
+
+
+@media (max-width: 480px) {
+    html{
+        overflow-x: hidden;
+    }
+    .section-politica-privacidades {
+        width: 87%;
+    }
+    .article-politica-privacidades {
+        margin: 0em 0.5em 4em 0.5em;
+        font-size: 36px;
+    }
+
+    .article-politica-privacidades h1 {
+        font-size: 2em; 
+    }
+
+    .article-politica-privacidades h2 {
+        font-size: 1.8em; 
+    }
+
+    .titulo-extra {
+        font-size: 3em; 
+        border-bottom: 1px solid rgb(88, 87, 87); 
+    }
+
+    .bottomNavigation ul li img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .bottomNavigation ul li span {
+        font-size: 36px !important;
+    }
+}
