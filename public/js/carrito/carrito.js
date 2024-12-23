@@ -423,6 +423,7 @@ async function compraFinal(precioFinal,numeroCarrito,stockTotal){
             for (let botonDireccion of botonesdirecciones) {
 
                 botonDireccion.addEventListener('click', async (e) => {
+                    sectionCarrito.style.width = "30%";
                     let addresId = e.target.value;
                     let cp = e.target.getAttribute("data-cp");
                     console.log(orderId, addresId);
@@ -445,19 +446,22 @@ async function compraFinal(precioFinal,numeroCarrito,stockTotal){
                         let tituloProducto = document.createElement('p');
                         let cantidadProducto = document.createElement('p');
                         let precioProducto = document.createElement('p');
+                        let tallaProducto = document.createElement('p');
 
                         divProducto.className = 'div-producto-final-compra';
                         tituloProducto.className = 'titulo-producto-compra-final';
                         cantidadProducto.className = 'cantidad-producto-compra-final';
                         precioProducto.className = 'precio-producto-compra-final';
+                        tallaProducto.className = 'talla-producto-compra-final';
 
                         tituloProducto.textContent = producto.name;
                         
                         cantidadProducto.textContent = `Cantidad: ${producto.cantidad}`;
+                        tallaProducto.textContent = `Talla: ${producto.talla}`;
                         console.log(precioFinal);
                         precioProducto.textContent = `Precio: ${producto.precio} €`;
                         
-                        divProducto.append(tituloProducto, cantidadProducto, precioProducto);
+                        divProducto.append(tituloProducto, tallaProducto, cantidadProducto, precioProducto);
                         articleVentaFinal.append(divProducto);
                     });
                     
@@ -509,6 +513,7 @@ async function compraFinal(precioFinal,numeroCarrito,stockTotal){
 
                     botonFinalizarPago.addEventListener('click', async (e) => {
                         console.log(precioTotalFinal);
+                        sectionCarrito.style.width = "60%";
                         sectionCarrito.innerHTML = "";
 
                         let contenedorPago = document.createElement("div");

@@ -176,7 +176,7 @@ main {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .boton-carrito-finalizar-compra:hover {
@@ -186,6 +186,7 @@ main {
 .articulos-carrito-final {
     margin: 20px 0;
     font-size: 1.2em;
+    color: #333;
 }
   
 .precio-carrito-final {
@@ -198,6 +199,8 @@ main {
 .titulo-confirmacion {
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 500;
+    color: #333;
 }
 
 .lista-direcciones-carrito {
@@ -217,6 +220,7 @@ main {
     margin-left: 10px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 0.9em;
 }
 
 .boton-confirmacion-direccion:hover {
@@ -230,6 +234,7 @@ main {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 0.9em;
 }
 
 .boton-finalizar-pago:hover {
@@ -241,6 +246,16 @@ main {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     background-color: #f9f9f9;
+    border-radius: 8px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulos-carrito {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
 }
 
 .precio-final-venta {
@@ -408,6 +423,11 @@ input[type="email"] {
 
 #payButton:hover {
     background-color: #0056b3;
+}
+
+.titulo-metodos-pago {
+    font-size: 24px;
+    font-weight: 500;
 }
 
 
