@@ -2,6 +2,7 @@
 main {
     display: flex;
     justify-content: center;
+    height: fit-content;
     line-height: 1.6;
 }
 
@@ -21,7 +22,8 @@ main {
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-    width: 45%;
+    width: 42.5em;
+    height: fit-content;
     margin-top: 3em;
     margin-bottom: 3em;
 }
@@ -90,14 +92,46 @@ main {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1040px) {
     .section-address {
-        width: 60%;
+        width: 35em;
+    }
+}
+
+@media (max-width: 920px) {
+    .section-address {
+        width: 30em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+    }
+    main {
+        line-height: 0;
+        margin-bottom: 5.8em;
+    }
+    .section-address {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width: 580px) {
+    .section-address {
+        width: 22.5em;
         padding: 30px;
     }
 
     .section-address h2 {
-        font-size: 1.8em;
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .section-address label {
+        font-size: 0.9em;
     }
 
     .section-address button.botonForm {
@@ -105,23 +139,8 @@ main {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
     .section-address {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .section-address h2 {
-        font-size: 1.6em;
-    }
-
-    .section-address input[type="text"],
-    .section-address input[type="number"] {
-        padding: 10px;
-    }
-
-    .section-address button.botonForm {
-        font-size: 0.9em;
-        padding: 12px;
+        width: 18em;
     }
 }

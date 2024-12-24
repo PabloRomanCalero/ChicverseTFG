@@ -202,8 +202,10 @@ async function introducirProductoCarrito(order,product_id,quantity, talla){
         });
     }
     let numCarritoElement = document.getElementById("numCarrito");
-    let currentCarritoCount = parseInt(numCarritoElement.textContent);
-    numCarritoElement.textContent = currentCarritoCount + parseInt(quantity);
+        let numCarritoBottom = document.getElementById("numCarritoBottom");
+        let currentCarritoCount = parseInt(numCarritoElement.textContent);
+        numCarritoElement.textContent = currentCarritoCount + parseInt(quantity);
+        numCarritoBottom.textContent = currentCarritoCount + parseInt(quantity);
 } 
 
 mostrarProducto();

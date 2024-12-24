@@ -1,4 +1,8 @@
-.seccionesFunciones ul li:first-child a{
+.seccionesFunciones ul li:first-child a {
+    font-weight: bold;
+}
+
+.bottomNavigation ul li:first-child span {
     font-weight: bold;
 }
 
@@ -424,7 +428,7 @@
         min-height: 0;
     }
     .divVideoImagen {
-        height: 420px;
+        height: 26.25em;
     }
 }
  

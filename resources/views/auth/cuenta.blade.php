@@ -9,7 +9,7 @@
     </div>
     <div class="profile-actions">  
         <div class="dropdownOpcionesDiv">
-            <button class="dropdownOpciones botonForm">Opciones</button>
+            <button class="dropdownOpciones botonForm">Acciones</button>
             <ul class="dropdownMenu">
                 <li><a href="{{route('formMedia')}}"><img src="https://cdn-icons-png.flaticon.com/512/992/992651.png"/>Publicar</a></li> 
                 <li>

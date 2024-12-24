@@ -1,17 +1,17 @@
 main {
     display: flex;
     justify-content: center;
+    height: fit-content;
+    margin-bottom: 1.5em;
 }
 
 .container {
     width: 75%;
     height: fit-content;
-    margin-top: 3.5em;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 3em;
 }
 
 .container h1 {
@@ -27,7 +27,7 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2.5em;
+    margin-top: 2.5em;
 }
 
 .cardHeader {
@@ -80,4 +80,37 @@ main {
 
 .table tbody tr td {
     color: #333;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+    }
+    main {
+        margin-top: 0 !important;
+        margin-bottom: 5.3em;
+    }
+    .container {
+        margin-top: 1em;
+        width: 85%;
+    }
+    .container h1 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+    .cardContainer {
+        margin-bottom: 0;
+        margin-top: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .table th, .table td {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+    .cardBody h5 {
+        font-size: 1.1em;
+    }
 }

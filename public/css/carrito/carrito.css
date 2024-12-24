@@ -7,6 +7,10 @@ main {
     font-weight: bold;
 }
 
+.bottomNavigation ul li:nth-child(4) span{
+    font-weight: bold;
+}
+
 #section-carrito {
     background-color: white;
     padding: 20px;

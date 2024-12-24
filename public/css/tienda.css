@@ -10,6 +10,10 @@
     font-weight: bold;
 }
 
+.bottomNavigation ul li:nth-child(3) span{
+    font-weight: bold;
+}
+
 #product-container {
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +23,7 @@
 }
 
 .product {
-    width: 250px;
+    width: 15.625em;
     margin: 30px;
     padding: 20px;
     background-color: #fff;
@@ -259,16 +263,17 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 0;
     }
     #product-container {
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 1.5em;
     }
     main {
+        margin-top: 0 !important;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
     .sexDiv {
         margin-bottom: 10px;
@@ -276,8 +281,10 @@
     .sexDiv div {
         font-size: 0.9em;
     }
-    .listaCategory {
-        margin-left: 10px;
+    .listaCategory ul {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .listaCategory ul li {
         font-size: 0.9em;
@@ -308,35 +315,7 @@
     }
 }
 
-@media (max-width: 400px) {
-    .product {
-        width: 500px;
-    }
-    .sexDiv div {
-        font-size: 22px;
-    }
-    .listaCategory ul li {
-        font-size: 22px;
-    }  
-    .product h3 {
-        font-size: 26px;
-    }
-    .product h4 {
-        font-size: 22px;
-    }
-    .product p {
-        font-size: 22px;
-    }
-    .product label {
-        font-size: 24px;
-    }
-    .selectTalla {
-        font-size: 22px;
-    }
-    .inputCantidad {
-        font-size: 20px;
-    }
-}
+
 @media (max-width: 1250px) {
     .containerBuscador{
         margin-left: 10px;

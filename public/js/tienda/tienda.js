@@ -283,8 +283,10 @@ async function inicializar() {
             });
         }
         let numCarritoElement = document.getElementById("numCarrito");
+        let numCarritoBottom = document.getElementById("numCarritoBottom");
         let currentCarritoCount = parseInt(numCarritoElement.textContent);
         numCarritoElement.textContent = currentCarritoCount + parseInt(quantity);
+        numCarritoBottom.textContent = currentCarritoCount + parseInt(quantity);
     } 
     loadProducts(selectedCategory, selectedSex);
 }
