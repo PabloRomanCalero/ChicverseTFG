@@ -1,6 +1,8 @@
 main {
     display: flex;
     justify-content: center;
+    height: fit-content;
+    margin-bottom: 3em;
 }
 
 .seccionesFunciones ul li:nth-child(4) a{
@@ -248,7 +250,6 @@ main {
 .article-venta-final {
     padding: 20px;
     border: 1px solid #ddd;
-    margin-bottom: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     color: #333;
@@ -432,6 +433,104 @@ input[type="email"] {
 .titulo-metodos-pago {
     font-size: 24px;
     font-weight: 500;
+}
+
+@media (max-width: 1440px) {
+    main {
+        margin-top: 0 !important;
+    }
+    #section-carrito {
+        width: 80% !important;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}
+
+@media (max-width: 940px) {
+    .div--nombreStock-carrito h2 {
+        font-size: 1em; 
+    }
+    
+    .talla--producto-carrito,
+    .stock--producto-carrito {
+        font-size: 0.85em; 
+    }
+    
+    .precio--producto-carrito,
+    .precioFinal--producto-carrito {
+        font-size: 0.9em; 
+    }
+    
+    .articulos-carrito-final {
+        font-size: 1em; 
+    }
+    
+    .precio-carrito-final {
+        font-size: 1.3em;
+    }  
+}
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center !important; 
+    }
+    main {
+        width: 100%;
+        margin-bottom: 4.7em;
+    }
+    .boton--borrarProducto-carrito {
+        padding: 4px 6px;
+        font-size: 0.9em;
+    }
+    .boton-mas-menos {
+        padding: 4px 6px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 624px) {
+    #section-carrito {
+        width: 90% !important;
+        padding: 10px;
+    }
+    .img--producto-carrito {
+        width: 70px;
+        margin-right: 5px;
+    }
+    .div--nombreStock-carrito {
+        margin-left: 0;
+    }
+    .articulo--producto-carrito {
+        padding: 5px;
+    }
+    .articulo--producto-carrito div{
+        padding: 5px;
+    }
+    .div--nombreStock-carrito h2 {
+        font-size: 0.95em;
+    }
+    .talla--producto-carrito,
+    .stock--producto-carrito {
+        font-size: 0.8em;
+    }   
+    .precio--producto-carrito,
+    .precioFinal--producto-carrito {
+        font-size: 0.85em;
+    } 
+    .articulos-carrito-final {
+        font-size: 0.95em;
+    }
+    .precio-carrito-final {
+        font-size: 1.25em;
+    }
+    .contenedor-pagos {
+        padding: 0;
+    }
+    .formPagosDiv {
+        width: 90%;
+        margin-top: 4em;
+    }
+    
 }
 
 

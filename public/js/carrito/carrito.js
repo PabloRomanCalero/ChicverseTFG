@@ -12,6 +12,7 @@ async function listarCarrito(){
         let orderLinesLength = orderLines.length;
         let contadorLinesLength = 0;
         let numCarrito = document.querySelector('#numCarrito');
+        let numCarritoBottom = document.querySelector('#numCarritoBottom');
         let numeroCarrito = 0;
         var stockTotal = true;
         let precioFinal = 0;
@@ -34,6 +35,7 @@ async function listarCarrito(){
             numeroCarrito = numeroCarrito + linea.quantity;
         });
         numCarrito.textContent = numeroCarrito;
+        numCarritoBottom.textContent = numeroCarrito;
 
         orderLines.forEach( async line => {
             console.log(line);
@@ -179,6 +181,7 @@ function eventoSumarRestar(){
             textPrice.textContent = `Total: ${(price * cantidad).toFixed(2)} €`;
             textPrice.dataset.precio = price * cantidad; 
             document.querySelector(".numCarrito").textContent = cantidad;
+            document.querySelector(".numCarritoBottom").textContent = cantidad;
 
             let preciosProductosInd = document.querySelectorAll(".precioFinal--producto-carrito");
             let cantidadProductos = document.querySelectorAll(".cantidad-producto");
@@ -664,6 +667,7 @@ async function compraFinal(precioFinal,numeroCarrito,stockTotal){
                                         });
                                     });
                                     document.querySelector(".numCarrito").textContent = "0";
+                                    document.querySelector(".numCarritoBottom").textContent = "0";
                                     setTimeout(() => {
                                         listarCarrito();
                                     }, 6000);

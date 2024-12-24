@@ -31,7 +31,7 @@
         <li><a href="{{route('inicio')}}"><img src="{{asset('img/sidebar/inicio.png')}}" alt="Inicio"><span>Inicio</span></a></li>
         <li><a href="{{route('cuenta')}}"><img src="{{asset('img/sidebar/usuario.png')}}" alt="Perfil"><span>Perfil</span></a></li>
         <li><a href="{{route('tienda')}}"><img src="{{asset('img/sidebar/ropa.png')}}" alt="Ropa"><span>Ropa</span></a></li>
-        <li class="carritoBottom"><a href="{{route('carrito')}}"><img src="{{asset('img/sidebar/carrito.png')}}" alt="Carrito"><span id="numCarritoBottom">0</span><span>Carrito</span></a></li>
+        <li class="carritoBottom"><a href="{{route('carrito')}}"><img src="{{asset('img/sidebar/carrito.png')}}" alt="Carrito"><span id="numCarritoBottom" class="numCarritoBottom">0</span><span>Carrito</span></a></li>
         <li class="dropdown">
             <a><img src="{{asset('img/sidebar/menuDesplegable.png')}}" alt="Más"><span>Más</span></a>
             <ul class="submenu">
