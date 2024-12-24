@@ -17,7 +17,8 @@
             <a><img src="{{asset('img/sidebar/menuDesplegable.png')}}" class="imgDesplegable" alt="más">Más</a>
             <ul class="submenu">
                 <li><a href="{{route('politicas')}}">Política de privacidad</a></li>
-                <li><a href="{{route('condiciones')}}">Terminos y condiciones de uso</a></li>
+                <li><a href="{{route('condiciones')}}">Términos y Condiciones</a></li>
+                <li><a href="{{route('aviso-legal')}}">Aviso legal</a></li>
                 <li><a href="{{route('contacto')}}">Contacto</a></li>
             </ul>
         </li>
@@ -35,7 +36,8 @@
             <a><img src="{{asset('img/sidebar/menuDesplegable.png')}}" alt="Más"><span>Más</span></a>
             <ul class="submenu">
                 <li><a href="{{route('politicas')}}">Política de privacidad</a></li>
-                <li><a href="{{route('condiciones')}}">Terminos y condiciones de uso</a></li>
+                <li><a href="{{route('condiciones')}}">Términos y Condiciones</a></li>
+                <li><a href="{{route('aviso-legal')}}">Aviso legal</a></li>
                 <li><a href="{{route('contacto')}}">Contacto</a></li>
             </ul>
         </li>

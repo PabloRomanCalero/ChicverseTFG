@@ -36,6 +36,7 @@ Route::get('/tienda', function () {return view('tienda');})->name('tienda');
 Route::get('/carrito', function () {return view('carrito.carrito');})->name('carrito');
 Route::get('/politicas-de-privacidad', function () {return view('extras.politicas');})->name('politicas');
 Route::get('/condiciones', function () {return view('extras.condiciones');})->name('condiciones');
+Route::get('/aviso-legal', function () {return view('extras.avisolegal');})->name('aviso-legal');
 Route::get('/contacto', function () {return view('extras.contacto');})->name('contacto');
 Route::get('/mapa-web', function () {return view('extras.mapa_web');})->name('mapa-web');
 

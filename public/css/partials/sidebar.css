@@ -276,19 +276,19 @@ main {
         flex-direction: column;
     }
     .bottomNavigation ul li img {
-        width: 3em;
-        height: 3em;
+        width: 2.3em;
+        height: 2.3em;
     }
     .bottomNavigation ul li span {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .bottomNavigation .dropdown .submenu li a{
-        font-size: 1em;
+        font-size: 0.9em;
         display: flex;
     }
     #numCarritoBottom {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
 @media (max-width: 1250px) {
