@@ -271,6 +271,7 @@
     }
     main {
         margin-top: 0 !important;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
