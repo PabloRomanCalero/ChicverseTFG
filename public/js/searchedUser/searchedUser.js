@@ -213,14 +213,16 @@ listarMedia = async () => {
                     localStorage.setItem('likedMedia', JSON.stringify(likedMedia));
 
                     $userId = media.user_id;
-                    await fetch('api/crearDescuento', {
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': token,
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ "user_id": media.user_id})
-                    }); 
+                    if(media.product_id != null){
+                        await fetch('api/crearDescuento', {
+                            method: 'POST',
+                            headers: {
+                                'X-CSRF-TOKEN': token,
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ "user_id": media.user_id})
+                        });
+                    }
                 }
                 
             }

@@ -258,7 +258,7 @@ a.botonForm{
     border: 1px solid #ccc;
     padding: 3px;
     border-radius: 5px;
-    width: 98%;
+    margin-bottom: 4px;
 }
 
 .imageUserComment{

@@ -256,9 +256,6 @@
 }
 
 @media (max-width: 768px) {
-    .containerBuscador {
-        display: none;
-    }
     .navbarProducts {
         display: flex;
         flex-direction: column;
@@ -318,8 +315,20 @@
 
 
 @media (max-width: 1250px) {
-    .containerBuscador{
-        margin-left: 10px;
+    .navbarProducts {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .containerBuscador {
+        margin-bottom: 10px;
+    }
+
+    .sexDiv {
+        margin-top: 10px;
     }
 }
 

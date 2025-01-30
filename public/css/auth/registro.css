@@ -59,15 +59,6 @@ body {
     width: 100%;
 }
 
-.titulo h1 {
-    color: #333;
-    font-size: 1.8em;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
 label {
     color: #333;
     display: block;
@@ -166,19 +157,20 @@ legend {
         padding: 30px;
     }
 
-    .titulo h1 {
-        font-size: 1.6em;
-    }
-
     .botonEnviar {
         font-size: 0.95em;
     }
 }
 
 @media (max-width: 768px) {
+
+    .main-registro {
+        padding: 10px;
+    }
+
     .section-registro {
-        width: 90%;
-        padding: 20px;
+        width: 98%;
+        padding: 10px;
     }
 
     .titulo h1 {
@@ -199,4 +191,21 @@ legend {
         font-size: 0.9em;
         padding: 12px;
     }
+
+    label {
+        margin-top: 0px;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+    .div-title h1 {
+        font-size: 2.1em;
+    }
+
+    legend {
+        font-size: 1.1em;
+    }
+
 }

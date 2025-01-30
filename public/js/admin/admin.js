@@ -534,7 +534,7 @@ const edit = async(nombre)=>{
                     boton_enviar_cambios.addEventListener('click',(e)=>{
                         let arrayErrores = [];
                         let error = false;
-                        if(inputName.value === '' || inputName.value === null  || inputName.value.length > 30){
+                        if(inputName.value === '' || inputName.value === null){
                             arrayErrores.push('Error en el nombre del producto, por favor escríbalo bien');
                             error = true;
                         }
@@ -554,7 +554,7 @@ const edit = async(nombre)=>{
                             arrayErrores.push('Error en la talla del producto, por favor escríbalo bien');
                             error = true;
                         }
-                        if(inputDescription.value === '' || inputDescription.value === null || inputDescription.value.length > 255){
+                        if(inputDescription.value === '' || inputDescription.value === null){
                             arrayErrores.push('Error en la descripción del producto, por favor escríbalo bien');
                             error = true;
                         }
@@ -604,6 +604,7 @@ const edit = async(nombre)=>{
                     let inputStock = document.createElement('input');
                     inputStock.type = "number";
                     inputStock.value = talla.stock
+                    inputStock.min = 0;
                     divInputs.classList.add('divInputs');
                     divInputs.append(`Stock de talla ${talla.talla}: `, inputStock, boton_enviar_cambios,divErrores)
                     bloqueEditar.append(divInputs);
@@ -761,6 +762,7 @@ const makeProducts = async () => {
                 input.className = "input_carac";
                 input.type = 'number';
                 input.value = 0;
+                input.min = 0;
                 input.setAttribute('data-talla', size);
                 div.append(label, input);
                 stockContainer.append(div);
@@ -784,7 +786,7 @@ const makeProducts = async () => {
 
                 let arrayErrores = [];
                 let error = false;
-                if (inputName.value === '' || inputName.value === null || inputName.value.length > 30) {
+                if (inputName.value === '' || inputName.value === null) {
                     arrayErrores.push('Error en el nombre del producto, por favor escríbalo bien');
                     error = true;
                 }

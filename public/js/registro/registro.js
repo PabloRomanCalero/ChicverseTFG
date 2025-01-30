@@ -1,9 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     let form = document.getElementById('form');
-    let submitButton = document.querySelector('.boton-enviar'); 
+    let submitBoton = document.querySelector('.boton-enviar'); 
 
-    submitButton.addEventListener('click', function(event) {
+    submitBoton.addEventListener('click', function(event) {
         event.preventDefault();
         let isValid = true;
 

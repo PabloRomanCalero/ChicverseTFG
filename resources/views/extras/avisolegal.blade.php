@@ -42,7 +42,7 @@
             <p>
                 Chicverse cumple con el Reglamento General de Protección de Datos (RGPD) y la normativa vigente en materia de 
                 protección de datos. Para más información sobre cómo gestionamos tus datos personales, consulta nuestra 
-                <a href="{{route('condiciones')}}">Política de Privacidad</a>.
+                <a href="{{route('politicas')}}">Política de Privacidad</a>.
             </p>
 
             <h2>6. Legislación y Jurisdicción Aplicable</h2>

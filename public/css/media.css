@@ -204,3 +204,9 @@ button[type="submit"] {
     }
     
 }
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 0em;
+    }
+}

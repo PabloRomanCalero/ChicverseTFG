@@ -153,11 +153,11 @@ async function listarCarrito(){
     }
 }
 
-function eventoSumarRestar(){
+async function eventoSumarRestar(){
     
     let botonesCantidad = document.querySelectorAll('.boton-mas-menos');
     botonesCantidad.forEach(boton=>{
-        boton.addEventListener('click',(e)=>{
+        boton.addEventListener('click', async (e)=>{
             let orderLineId = e.target.value;
             let target = e.target.textContent;
             let line = e.target.getAttribute("data-line");
@@ -214,13 +214,15 @@ function eventoSumarRestar(){
             document.querySelector('.articulos-carrito-final').dataset.cantFinal = totalCantidad;
 
             if(cantidad <= 0 ){
-                fetch(`api/orderLines/${orderLineId}`, {
+                let resp = await fetch(`api/orderLines/${orderLineId}`, {
                     method: "DELETE",
+                    mode:'cors',
                     headers: {
                         'X-CSRF-TOKEN': token,
                         'Content-Type': 'application/json',
                     },
                 });
+                console.log(resp);
                 listarCarrito();
             }else{
                 fetch(`api/orderLines/${orderLineId}`, {
@@ -240,19 +242,18 @@ function eventoSumarRestar(){
 
 function borrarLineOrder(){
     let botonesBorrar = document.querySelectorAll('.boton--borrarProducto-carrito');
-
     botonesBorrar.forEach((botonBorrar)=>{
-        botonBorrar.addEventListener('click',(e)=>{
+        botonBorrar.addEventListener('click', async (e)=>{
             let orderLineId = e.target.value;
-            fetch(`api/orderLines/${orderLineId}`, {
+            let resp = await fetch(`api/orderLines/${orderLineId}`, {
                 method: "DELETE",
                 mode:'cors',
                 headers: {
                     'X-CSRF-TOKEN': token,
                     'Content-Type': 'application/json',
                 },
-            }).then(resp=> resp.json()).then(resp=>console.log(resp));
-
+            });
+            console.log(resp);
             listarCarrito();
         });
     })
@@ -681,6 +682,11 @@ async function compraFinal(precioFinal,numeroCarrito,stockTotal){
                                     sectionCarrito.append(articleFinal);
                                 }    
                             });
+                            if (metodo === "Paypal") {
+                                setTimeout(() => {
+                                    metodoPago.click(); 
+                                }, 100); 
+                            }
                         });
                         console.log("a");
                         contenedorPago.append(tituloMetodosPago, contenedorMetodosPago, formPagosDiv);

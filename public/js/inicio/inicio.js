@@ -58,7 +58,7 @@ listarMedia = async () => {
     /*likedMedia = [];
     localStorage.setItem('likedMedia', JSON.stringify(likedMedia)); */
 
-    let respMedia = await fetch('api/media/exceptMedia');
+    let respMedia = await fetch('/api/media/exceptMedia');
     let mediaJson = await respMedia.json();
     console.log(mediaJson);
 
@@ -135,16 +135,17 @@ listarMedia = async () => {
                     localStorage.setItem('likedMedia', JSON.stringify(likedMedia));
 
                     $userId = media.user_id;
-                    await fetch('api/crearDescuento', {
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': token,
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ "user_id": media.user_id})
-                    }); 
-                }
-                
+                    if(media.product_id != null){
+                        await fetch('api/crearDescuento', {
+                            method: 'POST',
+                            headers: {
+                                'X-CSRF-TOKEN': token,
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ "user_id": media.user_id})
+                        }); 
+                    }    
+                }     
             }
         };
         const likesElement = document.createElement('p');

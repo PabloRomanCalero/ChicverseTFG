@@ -96,6 +96,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+    width: 17%;
 }
 
 .selectTalla {
@@ -209,5 +210,7 @@ main {
     .divImg {
         width: 10em;
     }
-
+    .inputCantidad {
+        padding: 8px 16px 8px 0;
+    }
 }
